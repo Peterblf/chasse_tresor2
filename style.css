@@ -1,7 +1,7 @@
 /* Importation d'une police western */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-/* Styles généraux */
+
 body {
     font-family: 'Special Elite', cursive;
     background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover;
