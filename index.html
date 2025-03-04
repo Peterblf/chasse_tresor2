@@ -4,58 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Étape 2 - Student Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
         <h1>Étape 2 : Student Hub</h1>
-        
-        <!-- Section de vérification du code de sécurité -->
-        <div id="verification">
-            <p>Entrez le code de sécurité pour accéder à l’énigme précédente :</p>
-            <input type="text" id="code" placeholder="Code de sécurité">
-            <button id="verifierCode">Valider</button>
-            <p id="messageCode" class="message"></p>
-        </div>
-
-        <!-- Section de l’énigme (cachée au départ) -->
-        <div id="enigme" class="hidden">
-            <p>Bravo ! Maintenant, résolvez cette énigme :</p>
-            <p><strong>Je suis le contraire d'en-dessous, ainsi que le lieu de l'innovation</strong></p>
-            <input type="text" id="reponse" placeholder="Votre réponse">
-            <button id="validerReponse">Valider</button>
-            <p id="messageEnigme" class="message"></p>
-        </div>
+        <p>Entrez le code de sécurité pour continuer :</p>
+        <input type="text" id="code" placeholder="Entrez le code" required>
+        <button id="valider">Valider</button>
+        <div id="message"></div>
     </div>
 
     <script>
-        document.getElementById("verifierCode").addEventListener("click", function() {
-    let codeSaisi = document.getElementById("code").value.trim();
-    let messageCode = document.getElementById("messageCode");
+        document.getElementById("valider").addEventListener("click", function() {
+            let code = document.getElementById("code").value.toLowerCase();
+            let message = document.getElementById("message");
 
-    if (codeSaisi === "2108") { // 🔑 Remplace "1234" par ton vrai code secret
-        messageCode.innerHTML = "✅ Code correct ! Accès à l'énigme.";
-        messageCode.style.color = "green";
-        document.getElementById("verification").style.display = "none";
-        document.getElementById("enigme").style.display = "block";
-    } else {
-        messageCode.innerHTML = "❌ Code incorrect. Réessayez !";
-        messageCode.style.color = "red";
-    }
-});
-
-document.getElementById("validerReponse").addEventListener("click", function() {
-    let reponseSaisie = document.getElementById("reponse").value.trim().toLowerCase();
-    let messageEnigme = document.getElementById("messageEnigme");
-
-    if (reponseSaisie === "terrasse") {
-        messageEnigme.innerHTML = "✅ Bonne réponse ! Rendez-vous à la Terrasse.";
-        messageEnigme.style.color = "green";
-    } else {
-        messageEnigme.innerHTML = "❌ Mauvaise réponse, essayez encore !";
-        messageEnigme.style.color = "red";
-    }
-});
-</script>
+            if (code === "code_correct") { // Remplace "code_correct" par le vrai code
+                message.innerHTML = "<p><strong>Bonne réponse !</strong></p><p>La prochaine étape se trouve sur la <strong>terrasse</strong>. Rendez-vous là-bas et scannez le QR code suivant !</p>";
+                message.style.color = "green";
+            } else {
+                message.innerHTML = "<p>Mauvais code, essayez encore !</p>";
+                message.style.color = "red";
+            }
+        });
+    </script>
 </body>
 </html>
