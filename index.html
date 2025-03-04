@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étape 2 - Student Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Étape 2 : Student Hub</h1>
+        
+        <!-- Section de vérification du code de sécurité -->
+        <div id="verification">
+            <p>Entrez le code de sécurité pour accéder à l’énigme :</p>
+            <input type="text" id="code" placeholder="Code de sécurité">
+            <button id="verifierCode">Valider</button>
+            <p id="messageCode" class="message"></p>
+        </div>
+
+        <!-- Section de l’énigme (cachée au départ) -->
+        <div id="enigme" class="hidden">
+            <p>Bravo ! Maintenant, résolvez cette énigme :</p>
+            <p><strong>Je suis souvent sur le toit, mais je ne suis pas un oiseau. Je suis l'endroit parfait pour profiter du soleil.</strong></p>
+            <input type="text" id="reponse" placeholder="Votre réponse">
+            <button id="validerReponse">Valider</button>
+            <p id="messageEnigme" class="message"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
