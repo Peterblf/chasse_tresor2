@@ -1,10 +1,9 @@
 /* Importation d'une police western */
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
-
 body {
     font-family: 'Special Elite', cursive;
-    background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover;
+    background: url('https://images.unsplash.com/photo-1529634892414-bd94c6e653cb') center/cover no-repeat;
     color: #4E2A14;
     text-align: center;
     margin: 0;
@@ -14,9 +13,31 @@ body {
     height: 100vh;
 }
 
+/* ✅ Correction : S'assurer que l'input est interactif */
 input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8B4513;
+    background: #FAE0C3;
+    color: #4E2A14;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+
+    /* ✅ Suppression des restrictions potentielles */
     pointer-events: auto !important;
     opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+/* ✅ Ajout d'un focus clair sur l'input */
+input:focus {
+    outline: 3px solid #FFD700;
+    background: #FFF5D7;
 }
 
 /* Conteneur style "vieille affiche" */
@@ -46,21 +67,7 @@ p {
     margin: 10px 0;
 }
 
-/* Champ de réponse style papier vieilli */
-input {
-    width: 80%;
-    padding: 10px;
-    font-size: 16px;
-    border: 2px solid #8B4513;
-    background: #FAE0C3;
-    color: #4E2A14;
-    border-radius: 5px;
-    margin-top: 15px;
-    text-align: center;
-    font-family: 'Special Elite', cursive;
-}
-
-/* Bouton style cow-boy */
+/* ✅ Correction : Bouton cliquable sans restriction */
 button {
     background: #8B4513;
     color: #FFD700;
@@ -72,6 +79,13 @@ button {
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Special Elite', cursive;
+
+    /* ✅ Suppression de tout effet qui pourrait bloquer le clic */
+    pointer-events: auto !important;
+    opacity: 1 !important;
+    display: inline-block !important;
+    position: relative !important;
+    z-index: 10 !important;
 }
 
 button:hover {
