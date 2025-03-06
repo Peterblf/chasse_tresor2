@@ -21,14 +21,14 @@ body {
         }
 
         .logo {
-            width: 400px;  /* Taille du logo */
+            width: 200px;  /* Taille du logo */
             height: auto;
         }
 
         /* Assurez-vous que le logo reste visible sur tous les appareils */
         @media (max-width: 768px) {
             .logo {
-                width: 40px;  /* Taille réduite sur les petits écrans */
+                width: 100px;  /* Taille réduite sur les petits écrans */
             }
         }
 
