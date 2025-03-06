@@ -12,6 +12,25 @@ body {
     justify-content: center;
     height: 100vh;
 }
+/* Ajout du style pour le logo */
+        .logo-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;  /* Le logo sera au-dessus du reste du contenu */
+        }
+
+        .logo {
+            width: 100px;  /* Taille du logo */
+            height: auto;
+        }
+
+        /* Assurez-vous que le logo reste visible sur tous les appareils */
+        @media (max-width: 768px) {
+            .logo {
+                width: 40px;  /* Taille réduite sur les petits écrans */
+            }
+        }
 
 /* ✅ Correction : S'assurer que l'input est interactif */
 input {
