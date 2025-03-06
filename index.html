@@ -21,8 +21,7 @@
             let message = document.getElementById("message");
 
             if (code === "2108") { // Remplace "code_correct" par le vrai code
-                message.innerHTML = "<p><strong>Bonne réponse !</strong></p><p>La prochaine étape se trouve sur la <strong>terrasse</strong>. Rendez-vous là-bas et scannez le QR code suivant !</p>";
-                message.style.color = "green";
+                window.location.href = "";
             } else {
                 message.innerHTML = "<p>Mauvais code, essayez encore !</p>";
                 message.style.color = "red";
